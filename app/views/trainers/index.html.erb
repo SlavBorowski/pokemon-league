@@ -1,10 +1,16 @@
-<h1>Index page</h1>
+<body>
+  <div class="wrapper">
+    <h1>POKEMON LEAGUE</h1>
 
-<% @trainers.each do |trainer| %>
-  <ul>
-    <li>
-      <h2><%= link_to trainer.trainername, trainer_path(trainer[:id]) %></h2>
-      <h3>Pokemons owned: <%= trainer.pokemons.length %></h3>
-    </li>
-  </ul>
-<% end %>
+    <div class="container">
+      <% @trainers.each do |trainer| %>
+        <ul>
+          <li>
+            <h2><%= link_to trainer.trainername.upcase, trainer_path(trainer[:id]) %></h2>
+            <h3>Pokemons owned: <%= trainer.pokemons.length %></h3>
+          </li>
+        </ul>
+      <% end %>
+    </div>  
+  </div>  
+</body>
