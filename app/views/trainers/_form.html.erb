@@ -1,19 +1,19 @@
 <body>
   <div class="input-form">
     <%= form_with(model: pokemon, url: trainers_path, class: "input-form" ) do |f| %>
-      <%=f.label :nickname %>
-      <%= f.text_field :nickname %>
-      <%=f.label :base_pokemon %>
-      <%= f.text_field :base_pokemon %>
-      <%=f.label :poke_type %>
-      <%= f.text_field :poke_type %>
-      <%=f.label :level %>
-      <%= f.number_field :level %>
-      <%=f.label :attack %>
-      <%= f.number_field :attack %>
-      <%=f.label :hp %>
-      <%= f.number_field :hp %>
-      <%= f.submit %>
+      <%=f.label :nickname %><br>
+      <%= f.text_field :nickname %> <br>
+      <%=f.label :base_pokemon %><br>
+      <%= f.text_field :base_pokemon %> <br>
+      <%=f.label :poke_type %><br>
+      <%= f.text_field :poke_type %> <br>
+      <%=f.label :level %><br>
+      <%= f.number_field :level %> <br>
+      <%=f.label :attack %><br>
+      <%= f.number_field :attack %> <br>
+      <%=f.label :hp %><br>
+      <%= f.number_field :hp %> <br>
+      <%= f.submit %><br>
     <% end %>
   </div>
 </body>  
