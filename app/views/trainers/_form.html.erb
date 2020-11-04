@@ -1,0 +1,17 @@
+<div class="input-form">
+  <%= form_with(model: pokemon, url: trainers_path, class: "input-form" ) do |f| %>
+    <%=f.label :nickname %>
+    <%= f.text_field :nickname %>
+    <%=f.label :base_pokemon %>
+    <%= f.text_field :base_pokemon %>
+    <%=f.label :poke_type %>
+    <%= f.text_field :poke_type %>
+    <%=f.label :level %>
+    <%= f.number_field :level %>
+    <%=f.label :attack %>
+    <%= f.number_field :attack %>
+    <%=f.label :hp %>
+    <%= f.number_field :hp %>
+    <%= f.submit %>
+  <% end %>
+</div>
