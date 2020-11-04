@@ -1,25 +1,27 @@
 <body>
-  <h1><%= @trainer.trainername.upcase %></h1>
-  <div class="create-pokemon-button">
-    <% if user_signed_in? && current_user.trainername == @trainer.trainername %>
-      <%= link_to "Create Pokemon", new_trainer_path %>
-    <% end %>
-  </div>
-  <ol>
-    <% @trainer.pokemons.each do |p| %>
-      <li>
-        <p>Nickname: <%= p.nickname %></p>
-        <p>Base pokemon: <%= p.base_pokemon %></p>
-        <p>Type: <%= p.poke_type %></p>
-        <p>Level: <%= p.level %></p>
-        <p>Attack: <%= p.attack %></p>
-        <p>HP: <%= p.hp %></p>
-        <div class="delete-pokemon-button">
-          <% if user_signed_in? && current_user.trainername == @trainer.trainername %>
-            <%= link_to "Delete", trainer_path(p.id), method: :delete %>
-          <% end %>
-        </div>
-      </li>
-    <% end %>
-  </ol>
+  <div class="wrapper">
+    <h1><%= @trainer.trainername.upcase %></h1>
+    <div class="create-pokemon-button">
+      <% if user_signed_in? && current_user.trainername == @trainer.trainername %>
+        <%= link_to "Create Pokemon", new_trainer_path %>
+      <% end %>
+    </div>
+    <ol class="container">
+      <% @trainer.pokemons.each do |p| %>
+        <li>
+          <p>Nickname: <%= p.nickname %></p>
+          <p>Base pokemon: <%= p.base_pokemon %></p>
+          <p>Type: <%= p.poke_type %></p>
+          <p>Level: <%= p.level %></p>
+          <p>Attack: <%= p.attack %></p>
+          <p>HP: <%= p.hp %></p>
+          <div class="delete-pokemon-button">
+            <% if user_signed_in? && current_user.trainername == @trainer.trainername %>
+              <%= link_to "Delete", trainer_path(p.id), method: :delete %>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ol>
+  </div>  
 </body>  

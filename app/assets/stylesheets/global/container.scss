@@ -26,9 +26,6 @@ body {
   border-radius: 15px;
 }
 
-.container {
-
-}
 
 ul {
   text-align: center;
@@ -53,4 +50,23 @@ nav {
 }
 span {
   margin: 0px 60px;
+}
+
+ol {
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-weight: bold;
+  padding: 0px 0px;
+}
+
+li {
+  margin: 30px 30px;
+  background-color: yellow;
+  padding: 20px 20px;
+  border: 3px solid  blue;
+  border-radius: 15px;
+  list-style-type: none;
+  width: 200px;
 }
