@@ -22,7 +22,6 @@ class TrainersController < ApplicationController
   end
 
   def destroy
-    byebug
     current_user.pokemons.destroy(params[:id])
     redirect_to trainers_path
   end
