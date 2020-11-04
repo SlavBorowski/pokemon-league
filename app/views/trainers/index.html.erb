@@ -3,7 +3,7 @@
 <% @trainers.each do |trainer| %>
   <ul>
     <li>
-      <h2><%= trainer.trainername %></h2>
+      <h2><%= link_to trainer.trainername, trainer_path(trainer[:id]) %></h2>
       <h3>Pokemons owned: <%= trainer.pokemons.length %></h3>
     </li>
   </ul>
