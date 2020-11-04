@@ -1,0 +1,14 @@
+<h1><%= @trainer.trainername %></h1>
+
+<ol>
+  <% @trainer.pokemons.each do |p| %>
+    <li>
+      <p>Nickname: <%= p.nickname %></p>
+      <p>Base pokemon: <%= p.base_pokemon %></p>
+      <p>Type: <%= p.poke_type %></p>
+      <p>Level: <%= p.level %></p>
+      <p>Attack: <%= p.attack %></p>
+      <p>HP: <%= p.hp %></p>
+    </li>
+  <% end %>
+</ol>

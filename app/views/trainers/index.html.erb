@@ -1,0 +1,10 @@
+<h1>Index page</h1>
+
+<% @trainers.each do |trainer| %>
+  <ul>
+    <li>
+      <h2><%= trainer.trainername %></h2>
+      <h3>Pokemons owned: <%= trainer.pokemons.length %></h3>
+    </li>
+  </ul>
+<% end %>
