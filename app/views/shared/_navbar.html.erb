@@ -1,4 +1,5 @@
 <nav>
+  <%= link_to "Home", trainers_path %>
   <% if user_signed_in? %>
     <span class = "navbar"> <p> Welcome back <%= current_user.trainername %></p></span>
     <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
